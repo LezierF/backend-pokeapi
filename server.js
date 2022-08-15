@@ -5,10 +5,12 @@ const { validate } = require('./schemas');
 const { fetchPokemonById, fetchAllPokemon, fetchTypePokemon } = require('./services/pokemon-service')
 const app = express();
 
+const port = process.env.PORT || 5050
+
 app.use(cors());
 app.use(express.json());
 
-app.listen(5050, () => {
+app.listen(port, () => {
   console.log('🚀 Listening on port 5050!');
 });
 
